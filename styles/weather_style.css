@@ -1,0 +1,163 @@
+body {
+    font-family: CircularStd;
+    color: #626465;
+    background-image: url(clouds.jpeg);
+
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    height: 80vh;
+    width: 175vh;
+    font-size: 40px;
+}
+
+
+.my-weather {
+    font-family: 'Lobster', cursive;
+    color: #cbd9e4;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 2% repeat(10, 9.6%) 2%;
+    grid-template-columns: repeat(10, 10%);
+    height: 100vh;
+}
+
+.title {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    font-family: 'Lobster', cursive;
+    font-size: 28px;
+    color: #cbd9e4;
+}
+
+#alert {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 150px;
+    height: 80px;
+    width: 175vh;
+}
+
+.aqua {
+    color: #cbd9e4;
+}
+
+.row {
+    grid-area: 2/7 !important;
+    display: flex;
+}
+
+.btn {
+    margin-left: 5px;
+    color: #5d84bb;
+}
+
+#city {
+    width: 300px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: #ffffffad;
+}
+
+h2 {
+    font-size: 120px;
+    font-weight: bold;
+    width: 700px;
+}
+
+.temperature {
+    display: flex;
+    height: 300px;
+}
+
+h3 {
+    font-size: 150px;
+}
+
+h5,
+.centigrades {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.temp-centigrades {
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.info {
+    grid-area: 3/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.desc {
+    display: inline;
+    margin-top: 150px;
+    width: 190px;
+}
+
+h4 {
+    letter-spacing: 4px;
+    width: 140px;
+}
+
+.min-max {
+    grid-area: 10/1;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.three-h-later {
+    display: flex;
+    flex-direction: column;
+    grid-area: 9/6;
+}
+
+.six-h-later {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 8;
+    grid-row-start: 9;
+    border-left: 1px solid black;
+    padding-left: 130px;
+    height: 170px;
+}
+
+h6 {
+    font-size: 40px;
+}
+
+.weather-img {
+    grid-area: 2/6/7/10;
+    padding-left: 90px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.wi {
+    font-size: 250px;
+    margin-top: 100px;
+    color: #cbd9e4;
+}
+
+@font-face {
+    font-family: CircularStd;
+    src: url(fonts/CircularStd-Book.otf);
+}

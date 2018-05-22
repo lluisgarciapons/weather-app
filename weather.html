@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Current weather</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="styles/weather-icons-master/css/weather-icons.css">
+    <link rel="stylesheet" href="styles/weather_style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="intro" class="intro">
+            <p>Know the weather of your city,</p>
+            <p>thanks to <span class="my-weather">MyWeather</span>!</p>
+        </div>
+
+        <div id="alert">
+            <div class="alert alert-warning">
+                <strong>We can't find this city!</strong> Try another one.   
+            </div>
+        </div>
+
+        <div id="showWeather" class="grid">
+            <!--
+            <div class="row">
+                <h3 class="text-center text-primary">Enter City Name</h3>
+                <span id="error"></span>
+            </div>
+-->
+            <div id="title" class="title">
+                <p>MyWeather</p>
+
+            </div>
+
+            <div class="row form-group form-inline">
+                <div class="input-city"><input type="text" name="city" id="city" class="form-control" placeholder="City Name" v-on:keyup.enter="knowCity"></div>
+                <div class="search-btn"><button id="submitWeather" class="btn" v-on:click="knowCity">Search</button></div>
+            </div>
+
+
+            <div class="info">
+                <div id="cityName" class="city-name">
+                    <h2 class="aqua"> {{city_name}} </h2>
+                </div>
+
+                <div id="temperature" class="temperature">
+                    <h3 class="aqua"> {{temp_now}} </h3> <span class="hidden temp-centigrades aqua">ºC</span>
+                </div>
+
+                <div id="desc" class="desc">
+                    <h4> {{description_now}} </h4>
+                </div>
+            </div>
+
+            <div class="min-max">
+                <div id="min" class="min">
+                    <span class="hidden min-and-max bold">MIN</span><br>
+                    <h5> {{min_temp_now}} <span class="hidden centigrades">ºC</span></h5>
+                </div>
+
+                <div id="max" class="max">
+                    <span class="hidden min-and-max bold">MAX</span><br>
+                    <h5> {{max_temp_now}} <span class="hidden centigrades">ºC</span></h5>
+                </div>
+            </div>
+
+            <div id="weatherImg" class="weather-img"><i id="image"></i></div>
+
+            <div id="three-h-later" class="three-h-later hidden">
+                <h6> {{time_in_3h}} </h6>
+                <h5> {{temp_in_3h}} </h5>
+                <h4> {{description_in_3h}} </h4>
+            </div>
+
+
+            <div id="six-h-later" class="six-h-later hidden">
+                <h6> {{time_in_6h}} </h6>
+                <h5> {{temp_in_6h}} </h5>
+                <h4> {{description_in_6h}} </h4>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="openweathermap-widget-15"></div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+
+    <script src="js/weather.js"></script>
+</body>
+
+</html>
